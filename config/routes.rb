@@ -1,4 +1,6 @@
-Golden::Application.routes.draw do
+Golden::Application.routes.draw do  
+  root :to => 'videos#index'
+
   get "/videos", controller: "videos", action: "index", as: :videos
 
   get "/videos/new/", controller: "videos", action: "new", as: :new_video
@@ -10,8 +12,6 @@ Golden::Application.routes.draw do
   get "/videos/:id/edit", controller: "videos", action: "edit", as: :edit_video
 
   put "/videos/:id", controller: "videos", action: 'update'
-
-
 
   delete "/videos/:id", controller: "videos", action: "destroy", as: :delete_video
 
@@ -64,7 +64,6 @@ Golden::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
