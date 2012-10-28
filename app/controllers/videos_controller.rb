@@ -41,7 +41,7 @@ class VideosController < ApplicationController
     if video.destroy
       redirect_to videos_path
     else
-
+      render :edit
     end
   end
 end
