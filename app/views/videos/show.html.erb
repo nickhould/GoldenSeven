@@ -1,0 +1,6 @@
+<h1><%= @video.name %></h1>
+<%= image_tag(@video.url) %>
+<nav> 
+	<%= link_to 'Edit', edit_video_path(@video) %>
+	<%= link_to 'Destroy', delete_video_path(@video), method: :delete %>
+</nav>

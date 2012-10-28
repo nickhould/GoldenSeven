@@ -1,0 +1,14 @@
+<h1>Videos</h1>
+<%= link_to 'Add a new video', new_video_path %>
+<ul>
+<% @videos.each do |video| %>
+	<li>
+			<%= image_tag(video.url) %>
+			<%= link_to video.name, video_path(video) %>
+			<nav> 
+				<%= link_to 'Edit', edit_video_path(video) %>
+				<%= link_to 'Destroy', delete_video_path(video),  method: :delete  %>
+			</nav>
+	</li>
+<% end %>
+</ul>
